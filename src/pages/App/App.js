@@ -6,7 +6,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
 import MyBetsPage from '../MyBetsPage/MyBetsPage';
 import BetHistoryPage from '../BetHistoryPage/BetHistoryPage';
-// import NavBar from '../../../src/components/NavBar/NavBar'
+import NavBar from '../../../src/components/NavBar/NavBar'
 
 
 class App extends Component {
@@ -38,27 +38,10 @@ class App extends Component {
         <header className="App-header">
         &nbsp;&nbsp;
           Bet Tracker
-
-          <nav>
-
-            <NavLink exact to='/'>
-              My Bets
-            </NavLink>
-            &nbsp;&nbsp;&nbsp;
-            <NavLink exact to='/bet-history'>
-              Bet History
-            </NavLink>
-            &nbsp;&nbsp;&nbsp;
-            <NavLink exact to='/signup'>
-              Sign Up
-            </NavLink>
-            &nbsp;&nbsp;&nbsp;
-            <NavLink exact to='/login'>
-              Login
-            </NavLink>
-            &nbsp;&nbsp;&nbsp;
-
-          </nav>
+          <NavBar
+            user={this.state.user}
+            handleLogout={this.handleLogout}
+          />
 
         </header>
         <Switch>
