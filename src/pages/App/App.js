@@ -5,6 +5,7 @@ import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
 import userService from '../../utils/userService';
 import MyBetsPage from '../MyBetsPage/MyBetsPage';
+import BetHistoryPage from '../BetHistoryPage/BetHistoryPage';
 // import NavBar from '../../../src/components/NavBar/NavBar'
 
 
@@ -30,25 +31,43 @@ class App extends Component {
 
 
   render() {
+    
     return (
       <div className="App">
+       
         <header className="App-header">
+        &nbsp;&nbsp;
           Bet Tracker
+
           <nav>
+
             <NavLink exact to='/'>
               My Bets
+            </NavLink>
+            &nbsp;&nbsp;&nbsp;
+            <NavLink exact to='/bet-history'>
+              Bet History
             </NavLink>
             &nbsp;&nbsp;&nbsp;
             <NavLink exact to='/signup'>
               Sign Up
             </NavLink>
+            &nbsp;&nbsp;&nbsp;
             <NavLink exact to='/login'>
               Login
             </NavLink>
+            &nbsp;&nbsp;&nbsp;
+
           </nav>
+
         </header>
         <Switch>
-          
+          <Route exact path='/bet-history' render={() =>
+            <BetHistoryPage
+              user={this.state.user}
+              handleLogout={this.handleLogout}
+            />
+          }/>
           <Route exact path='/' render={() =>
             <MyBetsPage
               user={this.state.user}
