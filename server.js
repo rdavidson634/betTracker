@@ -2,8 +2,11 @@ const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const cors = require('cors');
 
 const app = express();
+
+app.use(cors());
 
 require('dotenv').config();
 require('./config/database');
@@ -15,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/bets', require('./routes/api/bets'));
 
 app.use(require('./config/auth'));
 
