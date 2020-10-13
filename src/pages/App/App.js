@@ -12,6 +12,7 @@ import NavBar from '../../../src/components/NavBar/NavBar';
 
 
 
+
 class App extends Component {
   state = {
     bets: [],
@@ -69,6 +70,7 @@ class App extends Component {
               user={this.state.user}
               bets={this.state.bets}
               handleLogout={this.handleLogout}
+              handleAddBet={this.handleAddBet}
             />
           }/>
           <Route exact path='/signup' render={({ history }) => 

@@ -1,4 +1,9 @@
-.MyBetsPage-grid {
+.MyBetsPage-table {
     width: 47%;
     padding-left: 3%;
   }
+
+  .form-row {
+    width: 47%;
+    float: right;
+}
