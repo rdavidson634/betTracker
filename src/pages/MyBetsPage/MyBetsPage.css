@@ -3,10 +3,12 @@
     padding-left: 3%;
   }
 
-  .form-row {
-    width: 47%;
-    float: right;
-    margin-top: -5%;
-    
-    padding-right: 0%;
-}
+  .form-control {
+    width: 30%;
+    margin-left: 58%;
+  }
+
+ .add-bet-btn {
+   width: 30%;
+   margin-left: 58%;
+ }

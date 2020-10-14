@@ -1,5 +1,5 @@
 .App {
-  /* min-height: 100vh; */
+  min-height: 100vh;
   display: grid;
   grid-template-rows: 7vmin auto;
 }
@@ -12,17 +12,17 @@
   font-size: 2.5vmin;
   color: var(--background);
 }
-.App main {
+/* .App main {
   background-color: var(--background);
   display: flex;
   flex-flow: column nowrap; 
   justify-content: center;
   align-items: center;
-}
-.App main h1 {
+} */
+/* .App main h1 {
   color: var(--secondary-dark);
   margin-bottom: 5vmin;
-}
+} */
 
 h1 {
   text-align: center;

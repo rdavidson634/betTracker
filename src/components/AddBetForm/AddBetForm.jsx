@@ -36,7 +36,7 @@ class AddBetForm extends Component {
     render() {
         return (
             <>
-                <form ref={this.formRef} onSubmit={this.handleSubmit} className="form-row">
+                <form ref={this.formRef} onSubmit={this.handleSubmit} className="form-group">
                     <div>
                         <label></label>
                         <input
@@ -93,16 +93,18 @@ class AddBetForm extends Component {
                             placeholder="Amount"
                         />
                     </div>
-                    
-                    <button 
-                        className="btn btn-primary" 
-                        type="submit"
-                        disabled={this.state.invalidForm}
-                        >
-                        
-                        Submit form
-                        
-                    </button>
+                    <br/>
+                    <div className="add-bet-btn">
+                        <button 
+                            className="btn btn-warning btn-lg btn-block" 
+                            type="submit"
+                            disabled={this.state.invalidForm}
+                            >
+                            
+                            Submit form
+                            
+                        </button>
+                    </div>
                 </form>
             </>
         )
