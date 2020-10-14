@@ -5,11 +5,11 @@ class AddBetForm extends Component {
     state = {
         invalidForm: true, 
         formData: {
-            game: null,
-            team: null,
-            type: null,
-            odds: null,
-            amount: null
+            game: '',
+            team: '',
+            type: '',
+            odds: '',
+            amount: ''
         }
     };
 
@@ -95,7 +95,7 @@ class AddBetForm extends Component {
                     </div>
                     
                     <button 
-                        class="btn btn-primary" 
+                        className="btn btn-primary" 
                         type="submit"
                         disabled={this.state.invalidForm}
                         >

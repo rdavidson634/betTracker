@@ -30,6 +30,16 @@ class App extends Component {
     () => this.props.history.push('/'));
   }
 
+  handleDeleteBet = async id => {
+    await betAPI.deleteOne(id);
+    this.setState(
+      state => ({
+        bets: state.bets.filter(b => b._id !== id)
+      }),
+      () => this.props.history.push('/')
+    );
+  };
+
   handleLogout = () => {
     userService.logout();
     this.setState({ user: null });
@@ -38,6 +48,8 @@ class App extends Component {
   handleSignupOrLogin = () => {
     this.setState({ user: userService.getUser() });
   }
+
+  
 
  
 
@@ -69,6 +81,7 @@ class App extends Component {
               bets={this.state.bets}
               handleLogout={this.handleLogout}
               handleAddBet={this.handleAddBet}
+              handleDeleteBet={this.handleDeleteBet}
 
             />
           }/>
