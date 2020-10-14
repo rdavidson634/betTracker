@@ -2,9 +2,11 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 
-function BetListItem({bet}) {
+function BetListItem(props) {
+    
     return (
-        <table class="table table-dark">
+        <div>
+            <table class="table table-dark">
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Game</th>
@@ -17,15 +19,16 @@ function BetListItem({bet}) {
             <tbody>
             
                 <tr>
-                    <td>{bet.game}</td>
-                    <td>{bet.team}</td>
-                    <td>{bet.type}</td>
-                    <td>{bet.odds}</td>
-                    <td>${bet.amount}</td>
+                    <td>{props.bet.game}</td>
+                    <td>{props.bet.team}</td>
+                    <td>{props.bet.type}</td>
+                    <td>{props.bet.odds}</td>
+                    <td>${props.bet.amount}</td>
                 </tr>
-               
+
             </tbody>
         </table>
+        </div>
     );
 }
 export default BetListItem;

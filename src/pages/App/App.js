@@ -10,9 +10,6 @@ import BetHistoryPage from '../BetHistoryPage/BetHistoryPage';
 import NavBar from '../../../src/components/NavBar/NavBar';
 
 
-
-
-
 class App extends Component {
   state = {
     bets: [],
@@ -25,6 +22,7 @@ class App extends Component {
   }
 
   handleAddBet = async newBetData => {
+    newBetData.user = this.state.user._id
     const newBet = await betAPI.create(newBetData);
     this.setState(state => ({
       bets: [...state.bets, newBet]
@@ -71,6 +69,7 @@ class App extends Component {
               bets={this.state.bets}
               handleLogout={this.handleLogout}
               handleAddBet={this.handleAddBet}
+
             />
           }/>
           <Route exact path='/signup' render={({ history }) => 

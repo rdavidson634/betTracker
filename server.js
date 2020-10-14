@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/bets', require('./routes/api/bets'));
 
-app.use(require('./config/auth'));
+
 
 
 app.get('/*', function(req, res) {
