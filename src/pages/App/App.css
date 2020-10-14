@@ -1,5 +1,5 @@
 .App {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: grid;
   grid-template-rows: 7vmin auto;
 }
@@ -15,7 +15,7 @@
 .App main {
   background-color: var(--background);
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column nowrap; 
   justify-content: center;
   align-items: center;
 }
@@ -23,3 +23,8 @@
   color: var(--secondary-dark);
   margin-bottom: 5vmin;
 }
+
+h1 {
+  text-align: center;
+}
+

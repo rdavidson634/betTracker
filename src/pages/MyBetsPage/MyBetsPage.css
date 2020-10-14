@@ -6,4 +6,7 @@
   .form-row {
     width: 47%;
     float: right;
+    margin-top: -5%;
+    
+    padding-right: 0%;
 }
