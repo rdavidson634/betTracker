@@ -8,10 +8,10 @@ function MyBetsPage(props) {
     return (
         <>
         <h1>My Bets</h1>
-        <br/><br/><br/>
-        <div className="MyBetsPage-table">
+        <br/>
+        <div className="MyBetsPage-table table-responsive">
             
-            <table className="table table-striped table-dark">
+            <table className="table table-striped table-dark ">
             <thead className="">
                 <tr>
                     <th scope="col">Game</th>
@@ -35,7 +35,8 @@ function MyBetsPage(props) {
             </table>
 
         </div>
-        <div className="form-group">
+        <br/>
+        <div className="add-bet-form">
             <AddBetForm 
             handleAddBet={props.handleAddBet}
             />

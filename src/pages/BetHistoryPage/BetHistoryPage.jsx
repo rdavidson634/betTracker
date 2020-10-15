@@ -22,13 +22,14 @@ const BetHistoryPage = (props) => {
                 </tr>
             </thead>
             <tbody>    
-            {props.bets.filter(bet => (props.user && props.user._id === bet.user)).map(bet => 
+            {props.bets.filter(bet => (props.user && props.user._id === bet.user && bet.result === 'Win' || bet.result === 'Loss' || bet.result === 'Tie')).map(bet => 
                     <BetHistoryListItem
                     bet={bet}
                     key={bet._id} 
                     
                     /> 
-                )}
+                )
+                }
             </tbody>
         </table>
         </div>

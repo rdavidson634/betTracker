@@ -1,14 +1,17 @@
 .MyBetsPage-table {
-    width: 47%;
-    padding-left: 3%;
+    width: 55%;
+    margin: auto;
+    display: block;
+    height: 350px;
+    overflow-y: scroll;
   }
 
-  .form-control {
-    width: 30%;
-    margin-left: 58%;
+  .add-bet-form {
+    margin: auto;
+    width: 40%;
+
   }
 
- .add-bet-btn {
-   width: 30%;
-   margin-left: 58%;
- }
+
+
+ 

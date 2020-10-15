@@ -13,6 +13,7 @@ function BetHistoryListItem(props) {
                     <td>{props.bet.type}</td>
                     <td>{props.bet.odds}</td>
                     <td>${props.bet.amount}</td>
+                    <td>{props.bet.result}</td>
                     <td>
                         
                     </td>
