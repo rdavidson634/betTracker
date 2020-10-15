@@ -2,31 +2,49 @@ import React from 'react';
 import BetHistoryListItem from '../../components/BetListItem/BetHistoryListItem';
 import './BetHistoryPage.css';
 
-function performance(arr) {
-    let win = 0;
-    let loss = 0;
-    arr.forEach(function(ele) {
-        if(ele.result === 'Win') {
-            win += ele.amount 
-        } else if(ele.result === 'Loss') {
-            loss += ele.amount
-        }
-    })
-    return win - loss
-
-}
 
 const BetHistoryPage = (props) => {
+
+    function performance(arr) {
+        let win = 0;
+        let loss = 0;
+        arr.forEach(function(ele) {
+            if(props.user && props.user._id === ele.user && ele.result === 'Win') {
+                win += ele.amount 
+            } else if(props.user && props.user._id === ele.user && ele.result === 'Loss') {
+                loss += ele.amount
+            }
+        })
+        return win - loss
+    }
+
+    function totalWagers(arr) {
+        
+        let count = 0;
+        arr.forEach(function(ele) {
+            if(props.user && props.user._id === ele.user && ele.result === 'Win' || ele.result === 'Loss' || ele.result === 'Tie') {
+                count++
+            }
+        })
+        return count 
+    }
+
     return (
+        
         <>
+        
         <h1>Bet History</h1>
-            
+
             <br/>
             <div class="card">
                 <h3>Performance: ${performance(props.bets)}</h3>
             </div>
             <br/>
-          
+            <div>
+                <h3>Total Wagers: {totalWagers(props.bets)}</h3>
+            </div>
+            
+            <br/>
                 <div className="filter-form">
                     <form className="form-inline">
                         <select class="custom-select custom-select-sm">
@@ -76,4 +94,4 @@ const BetHistoryPage = (props) => {
     )
 }
 
-export default BetHistoryPage
+export default BetHistoryPage;

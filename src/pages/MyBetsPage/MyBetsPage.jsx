@@ -4,14 +4,30 @@ import BetListItem from '../../components/BetListItem/BetListItem';
 import './MyBetsPage.css';
 
 
-function MyBetsPage(props) {
+
+const MyBetsPage = (props) => {
+
+    function pendingWagers(arr) {
+        let count = 0;
+        arr.forEach(function(bet) {
+            if(props.user && props.user._id === bet.user && bet.result !== 'Win' && bet.result !== 'Loss' && bet.result !== 'Tie') {
+                count++
+            }
+        })
+        return count 
+    }
+    
     return (
         <>
         <h1>My Bets</h1>
         <br/>
         
         <h3>Pending: ${props.bets.filter(bet => (props.user && props.user._id === bet.user && bet.result !== 'Win' && bet.result !== 'Loss' && bet.result !== 'Tie')).reduce((total, bet) => total + bet.amount, 0)} </h3>
-        <hr/>
+        <br/>
+            <div>
+                <h3>Pending Wagers: {pendingWagers(props.bets)}</h3>
+            </div>
+        <br/>
         <div className="MyBetsPage-table table-responsive">
             
             <table className="table table-striped table-dark ">

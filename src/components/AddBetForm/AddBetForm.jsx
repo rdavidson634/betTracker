@@ -36,7 +36,7 @@ class AddBetForm extends Component {
     render() {
         return (
         <>
-        <div classname="add-bet-form">
+        <div className="add-bet-form">
             <form ref={this.formRef} onSubmit={this.handleSubmit} className="">
                 <div >
                     <div className="form-row"> 
