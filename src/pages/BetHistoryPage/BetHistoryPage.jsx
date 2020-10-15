@@ -2,12 +2,48 @@ import React from 'react';
 import BetHistoryListItem from '../../components/BetListItem/BetHistoryListItem';
 import './BetHistoryPage.css';
 
+function performance(arr) {
+    let win = 0;
+    let loss = 0;
+    arr.forEach(function(ele) {
+        if(ele.result === 'Win') {
+            win += ele.amount 
+        } else if(ele.result === 'Loss') {
+            loss += ele.amount
+        }
+    })
+    return win - loss
+
+}
+
 const BetHistoryPage = (props) => {
     return (
         <>
         <h1>Bet History</h1>
-            <h4>History</h4>
+            
             <br/>
+            <div class="card">
+                <h3>Performance: ${performance(props.bets)}</h3>
+            </div>
+            <br/>
+          
+                <div className="filter-form">
+                    <form className="form-inline">
+                        <select class="custom-select custom-select-sm">
+                            <option disabled selected>Filter</option>
+                            <option>Day</option>
+                            <option>Week</option>
+                            <option>Month</option>
+                            <option>Year</option>
+                        </select>
+                        &nbsp;&nbsp;&nbsp;
+                        <span>
+                            <button className="btn btn-warning btn-sm" type="submit">Search</button>
+                        </span>
+                    </form>
+                </div>
+           
+                <br/>
         <div className="Bet-History-table">
             
             <table className="table table-striped table-dark">
@@ -26,6 +62,7 @@ const BetHistoryPage = (props) => {
                     <BetHistoryListItem
                     bet={bet}
                     key={bet._id} 
+                    handleDeleteBet={props.handleDeleteBet}
                     
                     /> 
                 )
@@ -33,6 +70,8 @@ const BetHistoryPage = (props) => {
             </tbody>
         </table>
         </div>
+        <br/>
+        <br/>
         </>
     )
 }

@@ -1,16 +1,19 @@
 .Bet-History-table {
-    width: 47%;
-    padding-right: 3%;
-    margin-right: 0px;
-    margin-left: auto;
-    margin-bottom: 25%;
+    border-radius: 10px;
+    width: 55%;
+    margin: auto;
     display: block;
     height: 400px;
     overflow-y: scroll;
 
 }
+ 
 h4 {
     margin-right: 23%;
     margin-left: auto;
     /* margin-bottom: 0% */
+}
+
+.filter-form {
+    margin: auto;
 }

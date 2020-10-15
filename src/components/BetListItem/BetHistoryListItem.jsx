@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 
+
 function BetHistoryListItem(props) {
     
     return (
@@ -15,7 +16,12 @@ function BetHistoryListItem(props) {
                     <td>${props.bet.amount}</td>
                     <td>{props.bet.result}</td>
                     <td>
-                        
+                    <button
+                        className="btn btn-sm btn-danger margin-left-10"
+                        onClick={() => props.handleDeleteBet(props.bet._id)}
+                    >
+                        x
+                    </button>
                     </td>
                 </tr>
             

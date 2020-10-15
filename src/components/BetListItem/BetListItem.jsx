@@ -33,15 +33,15 @@ class BetListItem extends Component {
                 <td>{this.props.bet.odds}</td>
                 <td>${this.props.bet.amount}</td>
                 <td>
-                    <div className="form-group">
+                    <div className="select-close-out">
                         <form onSubmit={this.handleSubmit}>
-                        <select onChange={this.handleChange} name="result" id="sel1">
-                            <option disabled selected>Select Option</option>
-                            <option>Win</option>
-                            <option>Loss</option>
-                            <option>Tie</option>
-                        </select>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <select class="custom-select custom-select-sm" onChange={this.handleChange} name="result">
+                                <option disabled selected>Select</option>
+                                <option>Win</option>
+                                <option>Loss</option>
+                                <option>Tie</option>
+                            </select>
+                            <br/><br/>
                             <button className="btn btn-warning btn-sm" type="submit">Close Out</button>
                         </form>
                     </div>

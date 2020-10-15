@@ -105,7 +105,7 @@ class AddBetForm extends Component {
                             disabled={this.state.invalidForm}
                             >
                             
-                            Submit form
+                            Add bet
                             
                         </button>
                     </div>

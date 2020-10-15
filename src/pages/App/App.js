@@ -88,6 +88,7 @@ class App extends Component {
               user={this.state.user}
               bets={this.state.bets}
               handleLogout={this.handleLogout}
+              handleDeleteBet={this.handleDeleteBet}
             />
           }/>
           <Route exact path='/' render={() =>
