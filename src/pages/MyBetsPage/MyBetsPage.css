@@ -4,24 +4,27 @@
     margin: auto;
     display: block;
     height: 350px;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   .add-bet-form {
     margin: auto;
     width: 60%;
-
   }
 
   h3 {
     margin: auto;
-    
   }
 
   .select-close-out {
     width: 70%;
   }
+  .row {
+    margin: auto;
+    display: flex;
+  }
 
-
-
+  .login-msg {
+    text-align: center;
+  }
  

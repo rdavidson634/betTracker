@@ -40,7 +40,7 @@ class BetListItem extends Component {
                                 <option>Loss</option>
                                 <option>Tie</option>
                             </select>
-                            <br/><br/>
+                            <br/>&nbsp;
                             <button className="btn btn-warning btn-sm" type="submit">Close Out</button>
                         </form>
                     </div>

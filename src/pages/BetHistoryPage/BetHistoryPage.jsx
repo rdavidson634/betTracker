@@ -32,19 +32,24 @@ const BetHistoryPage = (props) => {
 
     return (  
         <>
-
+        <br/>
         <h1>Bet History</h1>
 
             <br/>
-            <div class="">
-                <h3>Performance: ${performance(props.bets)}</h3>
-            </div>
-            <br/>
-            <div>
-                <h3>Total Wagers: {totalWagers(props.bets)}</h3>
+            <div className="row">
+                <div className="pending-tron">
+                    <div className="jumbotron text-center col-md-12">
+                        <h3>Performance: ${performance(props.bets)}</h3>
+                    </div>
+                </div>    
+            &nbsp;&nbsp;&nbsp;
+                <div className="pending-wagers-tron">
+                    <div className="jumbotron text-center col-md-12">
+                        <h3>Total Wagers: {totalWagers(props.bets)}</h3>
+                    </div>
+                </div>
             </div>
             
-            <br/>
                 <div className="filter-form">
                     <form className="form-inline">
                         <select class="custom-select custom-select-sm">

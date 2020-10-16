@@ -7,7 +7,7 @@ import './MyBetsPage.css';
 
 const MyBetsPage = (props) => {
 
-    const showAddBet = (props.user) ? <AddBetForm handleAddBet={props.handleAddBet}/> : <h2>Log in to add a bet</h2>
+    const showAddBet = (props.user) ? <AddBetForm handleAddBet={props.handleAddBet}/> : <h2 className="login-msg">Login to track bets!</h2>
 
     function pendingWagers(arr) {
         let count = 0;
@@ -21,15 +21,23 @@ const MyBetsPage = (props) => {
     
     return (
         <>
+        <br/>
         <h1>My Bets</h1>
         <br/>
-        
-        <h3>Pending: ${props.bets.filter(bet => (props.user && props.user._id === bet.user && bet.result !== 'Win' && bet.result !== 'Loss' && bet.result !== 'Tie')).reduce((total, bet) => total + bet.amount, 0)} </h3>
-        <br/>
-            <div>
-                <h3>Pending Wagers: {pendingWagers(props.bets)}</h3>
+        <div className="row">
+            <div className="pending-tron">
+                <div className="jumbotron text-center col-md-12">
+                    <h3>Pending: ${props.bets.filter(bet => (props.user && props.user._id === bet.user && bet.result !== 'Win' && bet.result !== 'Loss' && bet.result !== 'Tie')).reduce((total, bet) => total + bet.amount, 0)} </h3>
+                </div>
             </div>
-        <br/>
+        &nbsp;&nbsp;&nbsp;
+            <div className="pending-wagers-tron">
+                <div className="jumbotron text-center col-md-12">
+                    <h3>Pending Wagers: {pendingWagers(props.bets)}</h3>
+                </div>
+            </div>
+        </div>
+        
         <div className="MyBetsPage-table table-responsive">
             
             <table className="table table-striped table-dark ">
@@ -40,7 +48,7 @@ const MyBetsPage = (props) => {
                     <th scope="col">Type</th>
                     <th scope="col">Odds</th>
                     <th scope="col">Amount</th>
-                    <th>Result</th>                   
+                    <th scope="col">Result</th>                   
                 </tr>
             </thead>
                
