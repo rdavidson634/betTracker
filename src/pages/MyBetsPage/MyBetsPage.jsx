@@ -7,6 +7,8 @@ import './MyBetsPage.css';
 
 const MyBetsPage = (props) => {
 
+    const showAddBet = (props.user) ? <AddBetForm handleAddBet={props.handleAddBet}/> : <h2>Log in to add a bet</h2>
+
     function pendingWagers(arr) {
         let count = 0;
         arr.forEach(function(bet) {
@@ -56,9 +58,8 @@ const MyBetsPage = (props) => {
         </div>
         <br/>
         <div className="add-bet-form">
-            <AddBetForm 
-            handleAddBet={props.handleAddBet}
-            />
+            {showAddBet}
+           
         </div>
         <br/>
         <br/>

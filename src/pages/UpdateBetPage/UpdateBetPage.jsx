@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import AddBetForm from '../../components/AddBetForm/AddBetForm';
+
 
 class UpdateBetPage extends Component {
     state = {

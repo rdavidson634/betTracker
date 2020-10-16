@@ -1,7 +1,5 @@
-import { render } from '@testing-library/react';
 import React, {Component} from 'react';
-import { scryRenderedComponentsWithType } from 'react-dom/test-utils';
-import {Link} from 'react-router-dom';
+
 
 
 class BetListItem extends Component {

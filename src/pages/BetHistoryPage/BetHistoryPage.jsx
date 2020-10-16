@@ -22,21 +22,21 @@ const BetHistoryPage = (props) => {
         
         let count = 0;
         arr.forEach(function(ele) {
-            if(props.user && props.user._id === ele.user && ele.result === 'Win' || ele.result === 'Loss' || ele.result === 'Tie') {
+            if((props.user && props.user._id === ele.user) && (ele.result === 'Win' || ele.result === 'Loss' || ele.result === 'Tie')) {
                 count++
             }
         })
         return count 
     }
 
-    return (
-        
+
+    return (  
         <>
-        
+
         <h1>Bet History</h1>
 
             <br/>
-            <div class="card">
+            <div class="">
                 <h3>Performance: ${performance(props.bets)}</h3>
             </div>
             <br/>
@@ -76,7 +76,7 @@ const BetHistoryPage = (props) => {
                 </tr>
             </thead>
             <tbody>    
-            {props.bets.filter(bet => (props.user && props.user._id === bet.user && bet.result === 'Win' || bet.result === 'Loss' || bet.result === 'Tie')).map(bet => 
+            {props.bets.filter(bet => (props.user && props.user._id === bet.user) && (bet.result === 'Win' || bet.result === 'Loss' || bet.result === 'Tie')).map(bet => 
                     <BetHistoryListItem
                     bet={bet}
                     key={bet._id} 

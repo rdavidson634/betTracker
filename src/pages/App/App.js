@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, Switch, NavLink, Redirect } from 'react-router-dom';
+import { Route, Switch, } from 'react-router-dom';
 import * as betAPI from '../../services/bet-api'
 import SignupPage from '../SignupPage/SignupPage';
 import LoginPage from '../LoginPage/LoginPage';
@@ -51,7 +51,6 @@ class App extends Component {
         () => this.props.history.push('/')
       );
   }
-
 
 
   handleLogout = () => {
