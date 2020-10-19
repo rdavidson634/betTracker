@@ -71,7 +71,7 @@ const BetHistoryPage = (props) => {
                 </div>
            
                 <br/>
-        <div className="Bet-History-table jumbotron bg-light">
+        <div className="Bet-History-table">
             
             <table className="table table-striped table-dark">
             <thead className="">

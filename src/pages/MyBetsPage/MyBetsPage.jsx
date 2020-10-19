@@ -34,7 +34,7 @@ const MyBetsPage = (props) => {
                     </div>
                 </div>
             </div>  
-            <div className="MyBetsPage-table table-responsive jumbotron bg-light">
+            <div className="MyBetsPage-table table-responsive">
                 <table className="table table-striped table-dark ">
                     <thead className="">
                         <tr>
