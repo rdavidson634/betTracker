@@ -38,11 +38,22 @@ class BetListItem extends Component {
                                 <option>Loss</option>
                                 <option>Tie</option>
                             </select>
-                            <br/> &nbsp;
+                            <br/> &nbsp;<br/>
                             <button className="btn btn-warning btn-sm" type="submit">Close Out</button>
                         </form>
                     </div>
                 </td>
+                {/* <td>
+                    <Link
+                        className='btn btn-xs btn-warning'
+                        to={{
+                            pathname: '/update',
+                            state: {bet: this.props.bet._id}
+                        }}
+                        >
+                        EDIT
+                    </Link>
+                </td> */}
             </tr>
             
         </>

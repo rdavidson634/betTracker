@@ -13,12 +13,11 @@ const NavBar = (props) => {
           Bet History
         </NavLink>
         &nbsp;&nbsp;&nbsp;
-        <Link to='' onClick={props.handleLogout} >LOG OUT</Link>
+        <Link to='' onClick={props.handleLogout} >Logout</Link>
         &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <span className='NavBar-welcome'>WELCOME, {props.user.name}</span>
+        <span className='NavBar-welcome'>Hello, {props.user.name}</span>
       </div>
       :
-
         <nav>
             <NavLink exact to='/'>
                 My Bets
@@ -37,7 +36,6 @@ const NavBar = (props) => {
             </NavLink>
                 &nbsp;&nbsp;&nbsp;
         </nav>
-  
     return (
       <div className='NavBar'>
         {nav}

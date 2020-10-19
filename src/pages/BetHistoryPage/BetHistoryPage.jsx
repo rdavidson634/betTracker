@@ -39,7 +39,6 @@ const BetHistoryPage = (props) => {
         <>
         <br/>
         <h1><strong>Bet History</strong></h1>
-
             <br/>
             <div className="row">
                 <div className="pending-tron">
@@ -90,10 +89,9 @@ const BetHistoryPage = (props) => {
                     <BetHistoryListItem
                     bet={bet}
                     key={bet._id} 
-                    handleDeleteBet={props.handleDeleteBet}
-                    
+                    handleDeleteBet={props.handleDeleteBet}   
                     /> 
-                )
+                    )
                 }
             </tbody>
         </table>

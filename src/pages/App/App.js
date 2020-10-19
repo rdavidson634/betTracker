@@ -101,10 +101,11 @@ class App extends Component {
 
             />
           }/>
-          <Route exact path='/update' render={() =>
+          <Route exact path='/update' render={({location}) =>
             <UpdateBetPage 
               user={this.state.user}
               handleUpdateBet={this.handleUpdateBet}
+              location={location}
               
             />
             }/>

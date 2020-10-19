@@ -1,7 +1,7 @@
 
 .MyBetsPage-table {
     border-radius: 10px;
-    width: 60%;
+    width: 65%;
     margin: auto;
     display: block;
     height: 350px;
@@ -11,6 +11,7 @@
   .add-bet-form {
     margin: auto;
     width: 60%;
+    color: #00C358;
   }
 
   h3 {

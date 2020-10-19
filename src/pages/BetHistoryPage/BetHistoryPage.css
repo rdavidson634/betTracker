@@ -1,11 +1,10 @@
 .Bet-History-table {
     border-radius: 10px;
-    width: 60%;
+    width: 65%;
     margin: auto;
     display: block;
     height: 400px;
     overflow-y: auto;
-
 }
  
 h4 {

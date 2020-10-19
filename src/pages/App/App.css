@@ -10,8 +10,8 @@
   align-items: center;
   justify-content: space-between;
   padding:4%;
-  font-size: 2.5vmin;
-  color: var(--background);
+  font-size: 3vmin;
+  color: #00C358
 }
 
 .footer {
