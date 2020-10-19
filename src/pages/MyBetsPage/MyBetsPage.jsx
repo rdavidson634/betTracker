@@ -22,23 +22,23 @@ const MyBetsPage = (props) => {
     return (
         <>
         <br/>
-        <h1>My Bets</h1>
+        <h1><strong>My Bets</strong></h1>
         <br/>
         <div className="row">
             <div className="pending-tron">
-                <div className="jumbotron text-center col-md-12">
-                    <h3>Pending: ${props.bets.filter(bet => (props.user && props.user._id === bet.user && bet.result !== 'Win' && bet.result !== 'Loss' && bet.result !== 'Tie')).reduce((total, bet) => total + bet.amount, 0)} </h3>
+                <div className="jumbotron text-center col-md-12 bg-secondary">
+                    <h3>Pending: <strong>${props.bets.filter(bet => (props.user && props.user._id === bet.user && bet.result !== 'Win' && bet.result !== 'Loss' && bet.result !== 'Tie')).reduce((total, bet) => total + bet.amount, 0)}</strong> </h3>
                 </div>
             </div>
         &nbsp;&nbsp;&nbsp;
             <div className="pending-wagers-tron">
-                <div className="jumbotron text-center col-md-12">
-                    <h3>Pending Wagers: {pendingWagers(props.bets)}</h3>
+                <div className="jumbotron text-center col-md-12 bg-secondary">
+                    <h3>Pending Wagers: <strong>{pendingWagers(props.bets)}</strong></h3>
                 </div>
             </div>
         </div>
         
-        <div className="MyBetsPage-table table-responsive">
+        <div className="MyBetsPage-table table-responsive jumbotron bg-light">
             
             <table className="table table-striped table-dark ">
             <thead className="">

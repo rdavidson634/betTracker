@@ -5,7 +5,6 @@ import React, {Component} from 'react';
 class BetListItem extends Component {
     state = { 
         formData: this.props.bet,
-    
     }
 
     handleSubmit = b => {
@@ -20,11 +19,10 @@ class BetListItem extends Component {
         });
     };
 
-
     render() {
     return (
-        <>
-            
+        <>       
+        
             <tr>
                 <td>{this.props.bet.game}</td>
                 <td>{this.props.bet.team}</td>
@@ -40,7 +38,7 @@ class BetListItem extends Component {
                                 <option>Loss</option>
                                 <option>Tie</option>
                             </select>
-                            <br/>&nbsp;
+                            <br/> &nbsp;
                             <button className="btn btn-warning btn-sm" type="submit">Close Out</button>
                         </form>
                     </div>

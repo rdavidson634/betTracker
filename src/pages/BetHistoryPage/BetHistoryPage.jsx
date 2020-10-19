@@ -29,23 +29,28 @@ const BetHistoryPage = (props) => {
         return count 
     }
 
+    // function filterByDay(arr) {
+    //     let ts = Math.round(new Date().getTime() / 1000);
+    //     props.bets.filter(bet => (props.user && props.user._id === bet.user) && (bet.timestamp < ts - (24 * 3600)))
+    // }
+
 
     return (  
         <>
         <br/>
-        <h1>Bet History</h1>
+        <h1><strong>Bet History</strong></h1>
 
             <br/>
             <div className="row">
                 <div className="pending-tron">
-                    <div className="jumbotron text-center col-md-12">
-                        <h3>Performance: ${performance(props.bets)}</h3>
+                    <div className="jumbotron text-center col-md-12 bg-secondary">
+                        <h3>Performance: <strong>${performance(props.bets)}</strong></h3>
                     </div>
                 </div>    
             &nbsp;&nbsp;&nbsp;
                 <div className="pending-wagers-tron">
-                    <div className="jumbotron text-center col-md-12">
-                        <h3>Total Wagers: {totalWagers(props.bets)}</h3>
+                    <div className="jumbotron text-center col-md-12 bg-secondary">
+                        <h3>Total Wagers: <strong>{totalWagers(props.bets)}</strong></h3>
                     </div>
                 </div>
             </div>
@@ -54,20 +59,20 @@ const BetHistoryPage = (props) => {
                     <form className="form-inline">
                         <select class="custom-select custom-select-sm">
                             <option disabled selected>Filter</option>
-                            <option>Day</option>
-                            <option>Week</option>
-                            <option>Month</option>
-                            <option>Year</option>
+                            <option value="day">Day</option>
+                            <option value="week">Week</option>
+                            <option value="month">Month</option>
+                            <option value="year">Year</option>
                         </select>
                         &nbsp;&nbsp;&nbsp;
                         <span>
-                            <button className="btn btn-warning btn-sm" type="submit">Search</button>
+                            <button className="btn btn-warning btn-sm" type="submit">Search </button>
                         </span>
                     </form>
                 </div>
            
                 <br/>
-        <div className="Bet-History-table">
+        <div className="Bet-History-table jumbotron bg-light">
             
             <table className="table table-striped table-dark">
             <thead className="">

@@ -121,7 +121,7 @@ class App extends Component {
             />
           }/>
         </Switch>
-        
+        <footer className="footer"></footer>
        
       </div>
     );
