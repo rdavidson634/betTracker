@@ -8,6 +8,7 @@
 - CSS
 - JavaScript
 - MongoDb
+- Mongoose
 - Express
 
 [Go to the App](https://bet-tracker-rd.herokuapp.com/)
