@@ -9,6 +9,7 @@
 - JavaScript
 - MongoDb
 - Mongoose
+- Node
 - Express
 
 [Go to the App](https://bet-tracker-rd.herokuapp.com/)
