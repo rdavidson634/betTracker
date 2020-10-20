@@ -59,7 +59,7 @@ const MyBetsPage = (props) => {
                     </tbody>
                 </table>
             </div>
-            <br/><br/>
+            <br/>
             <div className="add-bet-form">
                 {showAddBet}         
             </div>
