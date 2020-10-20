@@ -2,6 +2,7 @@ import React from 'react';
 
 function BetHistoryListItem(props) {
     return (
+        
                 <tr>
                     <td>{props.bet.game}</td>
                     <td>{props.bet.team}</td>

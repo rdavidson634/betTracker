@@ -88,6 +88,7 @@ class App extends Component {
               bets={this.state.bets}
               handleLogout={this.handleLogout}
               handleDeleteBet={this.handleDeleteBet}
+              updateFilterForm={this.updateFilterForm}
             />
           }/>
           <Route exact path='/' render={() =>

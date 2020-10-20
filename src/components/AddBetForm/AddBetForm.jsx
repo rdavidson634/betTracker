@@ -40,7 +40,7 @@ class AddBetForm extends Component {
             <form ref={this.formRef} onSubmit={this.handleSubmit} className="">
                 <div >
                     <div className="form-row"> 
-                        <div class="form-group col-md">
+                        <div className="form-group col-md">
                             <input
                                 className="form-control"
                                 name="game"
@@ -51,7 +51,7 @@ class AddBetForm extends Component {
                             />
                         </div>
                 
-                        <div class="form-group col-md">
+                        <div className="form-group col-md">
                             <input
                                 className="form-control"
                                 name="team"

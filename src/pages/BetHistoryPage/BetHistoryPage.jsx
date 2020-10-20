@@ -1,17 +1,23 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import BetHistoryListItem from '../../components/BetListItem/BetHistoryListItem';
+import FilterForm from '../../components/FilterForm/FilterForm'
 import './BetHistoryPage.css';
 
 
 const BetHistoryPage = (props) => {
+    const [bets, setBets] = useState([])
+
+    useEffect(() => {
+        setBets(props.bets.filter(bet => (bet.result === 'Win' || bet.result === 'Loss' || bet.result === 'Tie')))
+    }, [props.bets])
 
     function performance(arr) {
         let win = 0;
         let loss = 0;
         arr.forEach(function(ele) {
-            if(props.user && props.user._id === ele.user && ele.result === 'Win') {
+            if (ele.result === 'Win') {
                 win += ele.amount 
-            } else if(props.user && props.user._id === ele.user && ele.result === 'Loss') {
+            } else if (ele.result === 'Loss') {
                 loss += ele.amount
             }
         })
@@ -22,18 +28,12 @@ const BetHistoryPage = (props) => {
         
         let count = 0;
         arr.forEach(function(ele) {
-            if((props.user && props.user._id === ele.user) && (ele.result === 'Win' || ele.result === 'Loss' || ele.result === 'Tie')) {
+            if(ele.result === 'Win' || ele.result === 'Loss' || ele.result === 'Tie') {
                 count++
             }
         })
         return count 
     }
-
-    // function filterByDay(arr) {
-    //     let ts = Math.round(new Date().getTime() / 1000);
-    //     props.bets.filter(bet => (props.user && props.user._id === bet.user) && (bet.timestamp < ts - (24 * 3600)))
-    // }
-
 
     return (  
         <>
@@ -54,22 +54,15 @@ const BetHistoryPage = (props) => {
                 </div>
             </div>
             
-                <div className="filter-form">
-                    <form className="form-inline">
-                        <select class="custom-select custom-select-sm">
-                            <option disabled selected>Filter</option>
-                            <option value="day">Day</option>
-                            <option value="week">Week</option>
-                            <option value="month">Month</option>
-                            <option value="year">Year</option>
-                        </select>
-                        &nbsp;&nbsp;&nbsp;
-                        <span>
-                            <button className="btn btn-warning btn-sm" type="submit">Search </button>
-                        </span>
-                    </form>
-                </div>
-           
+               {props.bets.length ? <FilterForm 
+                bets={props.bets}
+                user={props.user}
+                setBets={setBets}
+                /> 
+                :
+                null
+               }
+                
                 <br/>
         <div className="Bet-History-table">
             
@@ -85,11 +78,13 @@ const BetHistoryPage = (props) => {
                 </tr>
             </thead>
             <tbody>    
-            {props.bets.filter(bet => (props.user && props.user._id === bet.user) && (bet.result === 'Win' || bet.result === 'Loss' || bet.result === 'Tie')).map(bet => 
+            {bets.map(bet => 
                     <BetHistoryListItem
                     bet={bet}
                     key={bet._id} 
-                    handleDeleteBet={props.handleDeleteBet}   
+                    handleDeleteBet={props.handleDeleteBet} 
+                      
+                    
                     /> 
                     )
                 }

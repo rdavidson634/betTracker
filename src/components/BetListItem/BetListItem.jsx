@@ -32,7 +32,7 @@ class BetListItem extends Component {
                 <td>
                     <div className="select-close-out">
                         <form onSubmit={this.handleSubmit}>
-                            <select class="custom-select custom-select-sm" onChange={this.handleChange} name="result">
+                            <select className="custom-select custom-select-sm" onChange={this.handleChange} name="result">
                                 <option disabled selected>Select</option>
                                 <option>Win</option>
                                 <option>Loss</option>
