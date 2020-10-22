@@ -5,6 +5,7 @@ import './NavBar.css';
 const NavBar = (props) => {
     let nav = props.user ?
       <div>
+        &nbsp;&nbsp;&nbsp;        
         <NavLink exact to='/'>
           My Bets
         </NavLink>

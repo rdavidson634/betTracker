@@ -9,7 +9,6 @@ module.exports = {
 
 async function index(req, res) {
     const bets = await Bet.find({user: req.user._id});
-    console.log(bets)
     res.status(200).json(bets);
 
 }
